@@ -17,3 +17,5 @@ The project will feature a futuristic and technological aesthetic. The interface
 We'll use HTML, CSS, and JavaScript to create interactive stories. This technical implementation will provide users with an intuitive and engaging experience, allowing them to better integrate into the story situation.
 # Group  
 As a member of the team, Weiqi Luo will be responsible for the construction of storylines, implementation of interface design, and coordination of technical development. The responsibilities of other team members Jiashuo Chen will cover content creation, art design and user experience.
+# Wireframes
+<img width="517" alt="13a91e3c17ab149fc588fbb48e5cbc9" src="https://github.com/minne999/minne999/assets/150717742/0eb3609b-e881-4f84-9a6f-600f07010dc9">
