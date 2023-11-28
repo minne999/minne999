@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regulate AI</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #container {
+      width: 80%;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #story {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #interaction {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #45a049;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="story">
+    <p>You choose to strengthen regulations to protect humanity, believing that the emotions of robots might pose risks.</p>
+    <img src="image/supervision.png" alt="supervision" style="width: 80%; max-width: 600px; height: auto;">
+    <p>On this path, you become an advocate for robot regulation. You propose stricter regulations, aiming to ensure that robots do not pose a threat to humanity.</p>
+    <p>However, this regulation also sparks division in society. Some support your position, seeing it as a means to ensure human safety, while others oppose it, arguing that robots should have more freedom.</p>
+    <p>You can choose:</p>
+    <ul>
+      <li><a href="continue_regulate.html">Continue to strengthen regulations.</a></li>
+      <li><a href="coexist_regulate.html">Seek a way for human-machine coexistence.</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- 在最后添加以下代码 -->
+<button onclick="restartGame()">restartGame</button>
+
+<script>
+  function restartGame() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

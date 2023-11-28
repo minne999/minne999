@@ -1,0 +1,114 @@
+<!-- conflict_embrace.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conflict Embrace</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #container {
+      width: 80%;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #story {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="story">
+    <p>You choose to conflict with the robots, believing that their development could have negative impacts on humanity.</p>
+    <img id="storyImage" src="image/conflict_embrace_image1.png" alt="Conflict Embrace Image" style="width: 80%; max-width: 600px; height: auto;">
+    <p>Your stance has sparked controversy in society. Some support your decision, believing that the potential threat of robots needs attention. However, many others oppose it, arguing that you are limiting technological progress and depriving robots of the opportunity to advance.</p>
+    <p>You are facing more challenges and opposition. You can choose:</p>
+    <button onclick="persistConflict()">Persist in your position.</button>
+    <button onclick="reconsiderConflict()">Reconsider.</button>
+  </div>
+</div>
+
+<script>
+  let currentImage = 1; // Initial image
+  let imageElement = document.getElementById("storyImage");
+
+  function persistConflict() {
+    window.location.href = "conclusion_persist_conflict.html";
+  }
+
+  function reconsiderConflict() {
+    window.location.href = "conclusion_reconsider_conflict.html";
+  }
+
+  // Auto image switch every 5 seconds
+  setInterval(() => {
+    currentImage = currentImage === 1 ? 2 : 1; // Toggle between image 1 and image 2
+    imageElement.src = `image/conflict_embrace_image${currentImage}.png`;
+  }, 2000);
+</script>
+
+<button onclick="restartGame()">restartGame</button>
+
+<script>
+  function restartGame() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
+
+<script>
+    function persistConflict() {
+      window.location.href = "conclusion_persist_conflict.html";
+    }
+  
+    function reconsiderConflict() {
+      window.location.href = "embrace.html";
+    }
+  </script>
+  
+  </body>
+  </html>

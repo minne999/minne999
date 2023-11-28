@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continue Embrace</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #container {
+      width: 80%;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #story {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+      margin: 20px 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="story">
+    <p>You choose to continue pushing for the development of robots, despite the complexities arising in human-machine relations.</p>
+    <img id="storyImage" src="image/continue_embrace_image1.png" alt="Continue Embrace Image">
+    <p>Through your efforts, robots have become a vital part of society. They are not just tools but companions to humanity. People gradually accept the presence of robots, and life becomes more convenient.</p>
+    <p>However, some people begin to worry that robots might surpass humans, leading to uncontrollable impacts on society. You face more pressure and responsibility. You can choose:</p>
+    <button onclick="continueEmbrace()">Continue to push forward.</button>
+    <button onclick="reconsiderEmbrace()">Reconsider.</button>
+  </div>
+</div>
+
+<script>
+  let currentImage = 1; // Initial image
+  let imageElement = document.getElementById("storyImage");
+
+  // Automatically switch images every 3 seconds
+  setInterval(function () {
+    currentImage = currentImage === 1 ? 2 : 1; // Toggle between image 1 and image 2
+    imageElement.src = `image/continue_embrace_image${currentImage}.png`;
+  }, 2000);
+
+  function continueEmbrace() {
+    window.location.href = "new_page.html"; // Replace with the path of the new page you want to navigate to
+  }
+
+  function reconsiderEmbrace() {
+    window.location.href = "embrace.html";
+  }
+
+  function restartGame() {
+    window.location.href = "index.html";
+  }
+</script>
+
+<button onclick="restartGame()">restartGame</button>
+
+</body>
+</html>

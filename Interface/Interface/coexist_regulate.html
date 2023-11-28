@@ -1,0 +1,109 @@
+<!-- coexist_regulate.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coexist with AI</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #story {
+      margin-bottom: 20px;
+    }
+    #interaction {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      display: none;
+    }
+    /* 共用样式，不需重复 */
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="story">
+    <p>You choose to seek a coexistence between humans and machines, attempting to resolve the conflicts between humanity and robots.</p>
+    <img src="image/regulate_coexist_1.png" alt="regulate coexist 1" id="regulateCoexistImage1" style="width: 80%; max-width: 600px; height: auto;">
+    <img src="image/regulate_coexist_2.png" alt="regulate coexist 2" id="regulateCoexistImage2"style="width: 80%; max-width: 600px; height: auto;">
+    <p>During this exploration, you propose a new model for human-machine coexistence. Robots gain more freedom but remain under certain regulations to ensure the safety of human society.</p>
+    <p>However, this proposal has sparked controversy. Some see it as a compromise, while others view it as the future of human-machine harmony.</p>
+    <p>In this process, you have the option to:</p>
+    <ul>
+      <li><a href="continue_coexist_regulate.html">Persist in human-machine coexistence.</a></li>
+      <li><a href="regulate.html">Reconsider.</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  let imageIndex = 1;
+  const imageElement1 = document.getElementById('regulateCoexistImage1');
+  const imageElement2 = document.getElementById('regulateCoexistImage2');
+
+  function toggleImage() {
+    if (imageIndex === 1) {
+      imageElement1.style.display = 'block';
+      imageElement2.style.display = 'none';
+    } else {
+      imageElement1.style.display = 'none';
+      imageElement2.style.display = 'block';
+    }
+
+    imageIndex = 3 - imageIndex; // 切换图片索引（1 到 2，2 到 1）
+  }
+
+  function restartGame() {
+    window.location.href = "index.html";
+  }
+
+  toggleImage();
+
+  setInterval(toggleImage, 2000); // 每 5 秒切换一次图片
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continue Regulating AI</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #story {
+      margin-bottom: 20px;
+    }
+    #interaction {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      display: none;
+    }
+    /* 共用样式，不需重复 */
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="story">
+    <p>You decide to continue strengthening the regulation of robots, ensuring the safety of human society.</p>
+    <img src="image/regulate_continue_1.png" alt="regulate continue 1" id="regulateContinueImage1"style="width: 80%; max-width: 600px; height: auto;">
+    <img src="image/regulate_continue_2.png" alt="regulate continue 2" id="regulateContinueImage2"style="width: 80%; max-width: 600px; height: auto;">
+    <p>Under the strengthened regulatory policies, robots become more restricted. Society experiences polarization, with one side supporting safety and stability, while the other believes robots should have more freedom.</p>
+    <p>During this process, you can choose:</p>
+<ul>
+    <li><a href="continue_coexist_regulate.html">Persist in human-machine coexistence.</a></li>
+    <li><a href="regulate.html">Reconsider.</a></li>
+  </ul>
+  
+  </div>
+</div>
+
+<!-- 在最后添加以下代码 -->
+<button onclick="restartGame()">restartGame</button>
+
+<script>
+  let imageIndex = 1;
+
+  function toggleImage() {
+    const image1 = document.getElementById('regulateContinueImage1');
+    const image2 = document.getElementById('regulateContinueImage2');
+
+    if (imageIndex === 1) {
+      image1.style.display = 'block';
+      image2.style.display = 'none';
+    } else {
+      image1.style.display = 'none';
+      image2.style.display = 'block';
+    }
+
+    imageIndex = 3 - imageIndex; // 切换图片索引（1 到 2，2 到 1）
+  }
+
+  function restartGame() {
+    window.location.href = "index.html";
+  }
+  toggleImage();
+
+  setInterval(toggleImage, 2000); // 每 5 秒切换一次图片
+</script>
+
+</body>
+</html>
